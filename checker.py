@@ -6,7 +6,7 @@ WEBHOOK = "https://discord.com/api/webhooks/1482150382514733207/MK3J5XQBhHgjr683
 r = requests.get(URL)
 data = r.json()
 
-if True:
+if data.get("hasVerifiedBadge") == True:
     requests.post(WEBHOOK, json={
-        "content": "🚨 c8jayson got VERIFIED BADGE!"
+        "content": "<@303699809439711232> 🚨 c8jayson just got a VERIFIED BADGE!"
     })
